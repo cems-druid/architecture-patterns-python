@@ -1,0 +1,39 @@
+This is Architecture Patterns with Pyton by Harry Percival and Bob Gregory pressed by O'Reilly.
+
+DOMAIN MODELING RECAP:
+
+    Domain Modeling: This is the part where your code is the closest to the business, the most likely to change, and the place where you deliver the most value to business. Make it easy to understand and modify. 
+
+    Distinguish Entities from Value Objects: A value object is defined by its attributes. It's usually best implemented as an immutable type. If you change an attribute on a Value Object, it represents a different object. In contrast, an entity has attributes that may vary over time and it will still be the same entity. It is important to define what does unqiuely identify an entity (usually some sort of name or reference field.)
+
+    Not everything has to be an object: Python is a multiparadigm language, so let the "verb" in your code be functions. FooManager --> manage_foo()
+
+    This is the time to apply your best OO design principles: Revisit the SOLID principles and all the other good heuristics like "has a versus is-a", "prefers composition over inheritence".  
+
+
+REPOSITORY PATTERN RECAP: 
+Note: Ports and adapters are part of object oriented world. Port is the interface between our application and whatever it is we wish to abstract away and the adapter is the implementation behind that interface or abstraction. 
+
+    Applying dependency inversion to your ORM: Our domian model should be free of infrastructure concerns, so your ORM should import your model and not the other way around.
+
+    The repository pattern is a simple abstraction around permenant storage: The repository gives you the illusion of a collection of in-memory objects. It makes it easy to create "FakeRepository" for testing and swap fundamental details of your infrastructure without distrupting your core application.
+
+ON COUPLING and ABSTRACTIONS
+We can make our systems easier to test and maintain by simplifying the interface between our business logic and messy I/O. Finding the right abstraction is tricky but here are a few heuristics and questions to ask yourself:
+    *Can I choose a familier Python data structure to represent the state of the messy system and then try to imagine a single function a single function that return that state?
+    *Where can I draw a line between my systems, where can I carve out a seam to stick that abstraction in?
+    *What is a sensible way of dividing things into components with different responsibilities? What implicit concepts can I make make explicit?
+    *What is dependencies and what is the core business logic?
+
+
+FIRST USE CASE -with flask API and service layer-
+    
+
+TDD in HIGH GEAR and LOW GEAR
+
+UNIT OF WORK PATTERN
+
+ 
+
+    
+
